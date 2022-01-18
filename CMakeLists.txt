@@ -8,7 +8,7 @@ add_library(ziapi INTERFACE)
 target_sources(
     ziapi
         INTERFACE
-        Placeholder.hpp
+        include/Placeholder.hpp
 )
 
 target_include_directories(
