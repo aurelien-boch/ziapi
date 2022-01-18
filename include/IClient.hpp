@@ -11,7 +11,8 @@
 namespace api
 {
     /**
-     * @interface This interface, defines the basic behavior of a client. It can be either an asio encapsulation or your
+     * @interface IClient
+     * @brief This interface defines the basic behavior of a client. It can either be an asio encapsulation or your
      * own socket abstraction.
      */
     class IClient
@@ -24,22 +25,22 @@ namespace api
         #endif
 
             /**
-             * @brief This method sends items to the client trough the socket. If the socket isn't able to wrote all
+             * @brief Send items to the client through the socket. If the socket isn't able to write all
              * the bytes, the method should throw an exception.
-             * @param content[in] This parameter refers to a vector that will contains all the elements to send.
+             * @param content[in] This parameter refers to a vector that will contain all the elements to send.
              */
             virtual void send(std::vector<std::byte> const &content) const = 0;
 
             /**
-             * @brief This method received items from the client trough the socket. If there is no bytes to read
+             * @brief Receives items from the client trough the socket. If there are no bytes to read
              * the method should throw an exception.
-             * @param bytesToRead[in] This parameter refers to the num=ber of bytes to read from the socket.
-             * @return a vector containing the bytes that has be read.
+             * @param bytesToRead[in] This parameter refers to the number of bytes to read from the socket.
+             * @return a vector containing the bytes that have been read.
              */
-            virtual std::vector<std::byte> recv(std::size_t bytesToRead) = 0;
+            virtual std::vector<std::byte> receive(std::size_t bytesToRead) = 0;
 
             /**
-             * @brief This method connects the socket a to given ip and port. If the socket is already connected (using
+             * @brief Connects the socket to a given ip and port. If the socket is already connected (using
              * connect or as a client for example, this method should throw an exception).
              * @param ip[in] This parameter refers to the ip to connect to.
              * @param port[in] This parameter refers to the port to connect to.
@@ -47,14 +48,14 @@ namespace api
             virtual void connect(std::uint32_t ip, std::uint16_t port) = 0;
 
             /**
-             * @brief This methods run the socket internal event loop (it can use select / poll / epoll / ...).
-             * If the socket loop is already running of the client is connected to another event loop (for example, a
+             * @brief Runs the socket internal event loop (it can use select / poll / epoll / ...).
+             * If the socket loop is already running or the client is connected to another event loop (for example, a
              * listener one), the method should throw an error.
              */
             virtual void run() = 0;
 
             /**
-             * @brief This method returns the file descriptor corresponding to the socket.
+             * @brief Returns the file descriptor corresponding to the socket.
              */
             virtual socket_type getNativeHandle() const noexcept = 0;
     };
