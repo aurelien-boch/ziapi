@@ -32,7 +32,7 @@ namespace api
              */
             void stop() = 0;
 
-        private:
+        protected:
             /**
              * @brief Handles a client request by calling the parser, the modules and the sender.
              * @param packet[in] Refers to the packet that was sent by the client.

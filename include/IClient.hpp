@@ -41,7 +41,7 @@ namespace api
 
             /**
              * @brief Connects the socket to a given ip and port. If the socket is already connected (using
-             * connect or as a client for example, it should throw an exception).
+             * connect or as a client for example), it should throw an exception.
              * @param ip[in] Refers to the ip to connect to.
              * @param port[in] Refers to the port to connect to.
              */
