@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <cstddef>
+
 #include "IClient.hpp"
 
 namespace api
@@ -37,7 +38,7 @@ namespace api
              * @param packet[in] Refers to the packet that was sent by the client.
              * @param client[in] Refers to the client that sent the packet.
              */
-            virtual void processRequest(std::vector<std::byte> &&packet, Client const &client) noexcept = 0;
+            virtual void processRequest(std::vector<std::byte> &&packet, IClient const &client) noexcept = 0;
     };
 }
 

@@ -18,7 +18,7 @@ namespace api
              * @param [in]packet Refers to a vector containing the raw data sent by the client as bytes.
              * @param [in]client Refers to the client that sent the packet.
              */
-            using packetReceivedCallback = std::function<void (std::vector<std::byte> &&packet, Client const &client)>;
+            using packetReceivedCallback = std::function<void (std::vector<std::byte> &&packet, IClient const &client)>;
 
             /**
              * @brief Starts the listener when called. If the listener is already started, it should throw an exception.
@@ -33,7 +33,7 @@ namespace api
             /**
              * @brief Changes the callback function that will be called when a complete packet is received.
              */
-            virtual void onPacket(packetRecievedCallback &&cb) = 0 noexcept;
+            virtual void onPacket(packetReceivedCallback &&cb) noexcept = 0;
     };
 }
 

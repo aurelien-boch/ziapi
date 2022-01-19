@@ -20,8 +20,7 @@ namespace api
              * an exception.
              * @param reply[in] Refers to the data that will be sent to the client.
              * @param client[in] Refers to the client to send the data to.
-             */
-            virtual void send(ResponseDataType const &reply, Client const &client) = 0;
+             */virtual void send(ResponseDataType const &reply, IClient const &client) = 0;
     };
 }
 
