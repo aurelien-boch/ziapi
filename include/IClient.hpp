@@ -55,7 +55,7 @@ namespace api
             virtual void run() = 0;
 
             /**
-             * @brief Returns the file descriptor corresponding to the socket.
+             * @brief Must be called to return file descriptor corresponding to the socket.
              */
             [[nodiscard]] virtual socket_type getNativeHandle() const noexcept = 0;
     };

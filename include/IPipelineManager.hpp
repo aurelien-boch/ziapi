@@ -9,7 +9,7 @@ namespace api
 {
     /**
      * @interface IPipelineManager
-     * @brief Defines the pipeline manager basic behavior.
+     * @brief Defines the basic behavior of the pipeline manager.
      * @tparam RequestDataType Refers to the request data type. It will be transferred from the
      * parser to the modules.
      * @tparam ResponseDataType Refers to the request response data type that will be
@@ -37,7 +37,7 @@ namespace api
              * @param packet[in] Refers to the packet that was sent by the client.
              * @param client[in] Refers to the client that sent the packet.
              */
-            virtual void serveRequest(std::vector<std::byte> &&packet, Client const &client) noexcept = 0;
+            virtual void processRequest(std::vector<std::byte> &&packet, Client const &client) noexcept = 0;
     };
 }
 
