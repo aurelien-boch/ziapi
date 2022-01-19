@@ -7,16 +7,16 @@ namespace api
 {
     /**
      * @interface IListener.
-     * @brief This interface defines the basic behavior of the pipeline listener.
+     * @brief Defines the basic behavior of the pipeline listener.
      */
     class IListener
     {
         public:
             /**
              * @typedef packetReceivedCallback
-             * @brief This type refers to the callback that will be called when a complete packet is received.
-             * @param [in]packet This parameter refers to a vector containing the raw data sent by the client as bytes.
-             * @param [in]client This parameter refers to the client that sent the packet.
+             * @brief Defines to the callback that will be called when a complete packet is received.
+             * @param [in]packet Refers to a vector containing the raw data sent by the client as bytes.
+             * @param [in]client Refers to the client that sent the packet.
              */
             using packetReceivedCallback = std::function<void (std::vector<std::byte> &&packet, Client const &client)>;
 

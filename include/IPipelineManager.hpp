@@ -9,10 +9,10 @@ namespace api
 {
     /**
      * @interface IPipelineManager
-     * @brief This interface defines the pipeline manager basic behavior.
-     * @tparam RequestDataType This template parameter refers to the request data type. It will be transferred from the
+     * @brief Defines the pipeline manager basic behavior.
+     * @tparam RequestDataType Refers to the request data type. It will be transferred from the
      * parser to the modules.
-     * @tparam ResponseDataType This template parameter refers to the request response data type that will be
+     * @tparam ResponseDataType Refers to the request response data type that will be
      * transferred between the modules and the IReplySender.
      */
     template <class RequestDataType, class ResultDataType>
@@ -34,8 +34,8 @@ namespace api
         private:
             /**
              * @brief Handles a client request by calling the parser, the modules and the sender.
-             * @param packet[in] This parameter refers to the packet that was sent by the client.
-             * @param client[in] This parameter refers to the client that sent the packet.
+             * @param packet[in] Refers to the packet that was sent by the client.
+             * @param client[in] Refers to the client that sent the packet.
              */
             virtual void serveRequest(std::vector<std::byte> &&packet, Client const &client) noexcept = 0;
     };
