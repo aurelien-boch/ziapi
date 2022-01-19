@@ -1,0 +1,36 @@
+@startuml
+
+interface IClient {
+    + send(content: std::vector<std::byte> const &) const: void
+    + receive(bytesToRead: std::size_t): std::vector<std::byte>
+    + connect(ip: std::uint32_t, port: std::uint16_t): void
+    + run(): void
+    + getNativeHandle() const noexcept: socket_type
+}
+
+interface IListener {
+    + using packetReceivedCallback = std::function<void (packet: std::vector<std::byte> &&, client: Client const &)>
+    + listen(): void
+    + stop(): void
+    + onPacket(callback: packetReceivedCallback &&): void noexcept
+}
+
+interface IModule {
+    + process(request: RequestDataType &, response: ResponseDataType &): void
+}
+
+interface IPacketParser<RequestDataType> {
+    + parse(rawRequest: std::vector<std::byte> const &): RequestDataType
+}
+
+interface IPipelineManager {
+    + listen(): void
+    + stop(): void
+    - processRequest(packet: std::vector<std::byte> &&, client: Client const &) noexcept: void
+}
+
+interface IReplySender {
+    + send(reply: ResponseDataType const &, client: Client const &): void
+}
+
+@enduml
