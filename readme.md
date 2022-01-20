@@ -47,8 +47,7 @@ There are two ways to install the API.
 With this procedure, CMake will automatically clone the repository in your cmake build folder
 and update it everytime there is an update on the API.
 
-Example:
-
+#### Example:
 cmake:
 ```cmake
 add_subdirectory(ziapi)
@@ -73,8 +72,7 @@ target_link_libraries(
 * Use `target_link_libraries()` with the target and the `ziapi` target to link the headers with all targets that will
   need it.
 
-Example:
-
+#### Example:
 shell:
 ```shell
 git clone https://github.com/aurelien-boch/ziapi
