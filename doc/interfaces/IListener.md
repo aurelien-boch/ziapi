@@ -1,7 +1,7 @@
 # IListener
 
 ### Description
-The IListener interface defines `Listener` methods that must be implemented.
+The IListener interface defines methods that `Listener` must implement.
 The goal of the `listener` is to listen for new connections and wait for full packet before calling the callback method,
 that was provided using the `onPacket()` method.
 
