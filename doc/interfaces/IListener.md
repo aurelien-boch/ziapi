@@ -2,7 +2,7 @@
 
 ### Description
 The IListener interface defines `Listener` methods that must be implemented.
-The goal of this class is listen for new connections and wait for full packet before calling the callback method,
+The goal of the `listener` is to listen for new connections and wait for full packet before calling the callback method,
 that was provided using the `onPacket()` method.
 
 You are free to chose how will the internal listener work (as long as it matches your client implementation obviously).
