@@ -29,7 +29,7 @@ namespace api
             void stop() = 0;
 
             /**
-             * @brief Configure the pipeline by loading modules, parsers, senders, listeners.
+             * @brief Configures the pipeline by loading modules, parsers, senders, listeners.
              * @param config[in] The PipelineConfig struct containing all paths to libraries.
              * @warning If the PipelineManager is unable to load the library, it should throw an exception.
              */
