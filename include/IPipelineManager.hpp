@@ -6,20 +6,12 @@
 
 #include "IClient.hpp"
 
-//TODO maybe remove the templates as they are just useless in the interface and disallow user to store multiples pipelines \
-//with different templates using upcast the client may be templated
-
 namespace api
 {
     /**
      * @interface IPipelineManager
      * @brief Defines the basic behavior of the pipeline manager.
-     * @tparam RequestDataType Refers to the request data type. It will be transferred from the
-     * parser to the modules.
-     * @tparam ResponseDataType Refers to the request response data type that will be
-     * transferred between the modules and the IReplySender.
      */
-    template <class RequestDataType, class ResultDataType>
     class IPipelineManager
     {
         public:
