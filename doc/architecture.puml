@@ -1,5 +1,27 @@
 @startuml
 
+class HTTPReply {
+    + std::uint16_t code;
+    + std::string body;
+    + std::unordered_map<std::string, std::string> headers
+}
+
+class HTTPRequest {
+    + std::string uri;
+    + std::string method;
+    + std::string body;
+    + std::unordered_map<std::string, std::string> queryOptions;
+    + std::unordered_map<std::string, std::string> headers;
+    + std::unordered_map<std::string, std::any> middlewareData;
+}
+
+class PipelineConfig {
+    + std::string listenerPath;
+    + std::string parserPath;
+    + std::string senderPath;
+    + std::vector<std::string> modulesPaths;
+}
+
 interface IClient {
     + send(content: std::vector<std::byte> const &) const: void
     + receive(bytesToRead: std::size_t): std::vector<std::byte>
@@ -26,6 +48,8 @@ interface IPacketParser<RequestDataType> {
 interface IPipelineManager {
     + listen(): void
     + stop(): void
+    + loadConfig(): void
+    + configurePipeline(PipelineConfig &config): void
     - processRequest(packet: std::vector<std::byte> &&, client: Client const &) noexcept: void
 }
 
