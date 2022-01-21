@@ -7,31 +7,33 @@
 namespace api
 {
     /**
-     * todo
-     * Warn user that if incompatibles modules / listeners / parsers / senders are loaded, the behavior is undefined.
-     * It can however be checked using typeid (decltype won't work since it's compile time). To check just add a second
-     * extern "C" function that will return the typeid of the parameters and check it in the PipelineManager using the
-     * typeid of the types provided in the template, if it matches, * ok, otherwise, an error must be thrown.
+     * @struct PipelineConfig
+     * @brief This structure defines a type that will be used to provide configuration to the PipelineManager
+     * @warning As the (modules / listener / parser / sender) are loaded by path. If templates are different, the
+     * libraries will be incompatibles. To prevent undefined behavior due to incompatible libraries, another `extern "C"`
+     * function can be used, it will return the typeid of the template. The core may then, check the typeid of all libs
+     * and compare if they are the same (modules may have two templates typeids (the request one and the response one)).
      */
     struct PipelineConfig
     {
         /**
-         * todo
+         * @brief This string refers to the path of the listener library.
          */
         std::string listenerPath;
 
         /**
-         * todo
+         * @brief This string refers to the path of the parser library.
          */
         std::string parserPath;
 
         /**
-         * todo
+         * @brief This string refers to the path of the sender library.
          */
         std::string senderPath;
 
         /**
-         * todo
+         * @brief This vector of string contains the path of all the modules that will be loaded.
+         * @warning The modules should be loaded in the order they are in the vector.
          */
         std::vector<std::string> modulesPaths;
     };
