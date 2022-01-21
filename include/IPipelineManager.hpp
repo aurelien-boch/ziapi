@@ -5,6 +5,7 @@
 #include <cstddef>
 
 #include "IClient.hpp"
+#include "types/PipelineConfig.hpp"
 
 namespace api
 {
@@ -26,6 +27,13 @@ namespace api
              * exception.
              */
             void stop() = 0;
+
+            /**
+             * @brief Configure the pipeline by loading modules, parsers, senders, listeners.
+             * @param config[in] The PipelineConfig struct containing all paths to libraries.
+             * @warning If the PipelineManager is unable to load the library, it should throw an exception.
+             */
+            void configurePipeline(PipelineConfig const &config);
 
         protected:
             /**
