@@ -50,7 +50,6 @@ interface IPipelineManager {
     + stop(): void
     + loadConfig(): void
     + configurePipeline(PipelineConfig const &config): void
-    - processRequest(packet: std::vector<std::byte> &&, client: Client const &) noexcept: void
 }
 
 interface IReplySender {
