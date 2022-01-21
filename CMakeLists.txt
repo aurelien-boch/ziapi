@@ -8,8 +8,8 @@ add_library(ziapi INTERFACE)
 target_sources(
     ziapi
         INTERFACE
-        include/types/HTTPReply.hpp
-        include/types/HTTPRequest.hpp
+        include/types/HttpReply.hpp
+        include/types/HttpRequest.hpp
         include/types/PipelineConfig.hpp
         include/IClient.hpp
         include/IListener.hpp
