@@ -6,6 +6,9 @@
 
 #include "IClient.hpp"
 
+//TODO maybe remove the templates as they are just useless in the interface and disallow user to store multiples pipelines \
+//with different templates using upcast the client may be templated
+
 namespace api
 {
     /**
