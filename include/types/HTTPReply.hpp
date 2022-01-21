@@ -1,30 +1,32 @@
 #ifndef HTTPREPLY_HPP
 #define HTTPREPLY_HPP
 
-#include <vector>
 #include <string>
+#include <unordered_map>
 
 namespace api
 {
     /**
-     * todo
+     * @struct HTTPReply
+     * @brief This structure defines an example type for HTTP(S) responses.
      */
     struct HTTPReply
     {
         /**
-         * todo
+         * @brief This field refers to the response code.
          */
         std::uint16_t code;
 
         /**
-         * todo
+         * @brief This string refers to the response body.
          */
         std::string body;
 
         /**
-         * todo
+         * @brief This map of strings refers to the response headers.
+         * The key represents the header name and the value represents it's value.
          */
-        std::vector<std::string> headers;
+        std::unordered_map<std::string, std::string> headers;
     };
 }
 
