@@ -28,14 +28,14 @@ namespace api
              * @brief Stops the pipeline listener when called. If the listener is already stopped, it should throw an
              * exception.
              */
-            void stop() = 0;
+            virtual void stop() = 0;
 
             /**
              * @brief Configures the pipeline by loading modules, parsers, senders, listeners.
              * @param config[in] The PipelineConfig struct containing all paths to libraries.
              * @warning If the PipelineManager is unable to load the library, it should throw an exception.
              */
-            void configurePipeline(PipelineConfig const &config);
+            virtual void configurePipeline(PipelineConfig const &config) = 0;
     };
 }
 
