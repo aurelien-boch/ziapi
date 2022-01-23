@@ -7,4 +7,4 @@ protocol the structure must be converted to a string that meets rfc7540 requirem
 
 ## How it works
 When the `PipelineManager` is done processing the request and applying all the middlewares, it will call the
-`send()` method of `IReplySender` with the final reply to send it to client.
+`send` method of `IReplySender` with the final reply to send it to client.
