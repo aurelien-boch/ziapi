@@ -1,0 +1,11 @@
+# Editors files and folders
+
+.idea/
+.vscode/
+*.swp
+*~
+\#*#
+
+# Cmake build folders
+
+*build*/
