@@ -15,7 +15,7 @@ During the setup state, the `PipelineManager` will load all the libs provided in
 unused libs. It will also pass an internal method as callback to the `Listener`.
 
 #### The listen state:
-During the listen state, the `PipelineManager` will listen for any new connection and message. When a full message is
+During the listen state, the `PipelineManager` will listen for any new connection and packet. When a full packet is
 received the method bound with the `Listener` will be called. The `PipelineManager` will then call the parser, which will
 return a parsed request, that will be passed by reference with a blank request. The modules will next be called (in the
 order they have been registered) and will mutate the request / response, the mutated response will then be passed to the

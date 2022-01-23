@@ -6,7 +6,7 @@ The goal of the modules is to process request doing basic actions (each `Module`
 example, a `Module` can log the request, another one can ensure the user is authenticated, etc.
 
 ### How it works
-The `Module` has a `process()` method that takes two arguments:
+The `Module` has a `process` method that takes two arguments:
  * The parsed request
  * The reply to send back to the client.
 
