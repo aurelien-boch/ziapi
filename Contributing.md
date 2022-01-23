@@ -1,4 +1,4 @@
-# Contributing to Zia
+# Contributing to Ziapi
 
 ## Rules
 
@@ -46,12 +46,12 @@ Follow that [guide](https://chris.beams.io/posts/git-commit/) to see how to writ
 
 ## GitHub workflow
 
-The recommended workflow is to clone the repository from `EpitechPromo2024/B-YEP-500-PAR-5-1-zia-aurelien.boch` and open pull requests directly from the repository.
+The recommended workflow is to clone the repository from `aurelien-boch/ziapi` and open pull requests directly from the repository.
 
 ### 1 - Clone the repository
 
 ```sh
-git clone git@github.com:EpitechPromo2024/B-YEP-500-PAR-5-1-zia-aurelien.boch
+git clone git@github.com:aurelien-boch/ziapi.git
 ```
 
 ### 2 - Create a Pull Request
@@ -91,5 +91,3 @@ git rebase main
 # Apply rebase
 git push -f
 ```
-
-[Go back to README](./README.md)

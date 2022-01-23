@@ -15,6 +15,8 @@ namespace api
     class IReplySender
     {
         public:
+            virtual ~IReplySender() = default;
+
             /**
              * @brief Sends the response data to the client. If the client isn't able to send the data, it should throw
              * an exception.
