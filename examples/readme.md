@@ -10,6 +10,6 @@ while others requires templating or composition)).
 ## Summary
  * [Http example](HttpListenerExample)
  * [Authorization module example](AuthorizationModuleExample)
- * [PacketParser example]()
- * [ReplySender example]()
- * [PipelineManager example]()
+ * [PacketParser example](HttpPacketParserExample)
+ * [ReplySender example](HttpReplySenderExample)
+ * [PipelineManager example](HttpPipelineManagerExample)
