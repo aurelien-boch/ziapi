@@ -48,7 +48,7 @@ namespace api::pipelines
             _modules.emplace_back(std::move(ptr));
         }
         _listener.onPacket([this] (std::vector<std::byte> &&packet, IClient const &client) -> void {
-            //preparation
+            // preparation
             _onPacket(std::forward<std::vector<std::byte>>(packet), client);
             //cleanup
         });
