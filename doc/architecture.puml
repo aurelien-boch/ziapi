@@ -1,25 +1,25 @@
 @startuml
 
 class HTTPReply {
-    + std::uint16_t code;
-    + std::string body;
-    + std::unordered_map<std::string, std::string> headers
+    + code: std::uint16_t;
+    + body: std::string;
+    + headers: std::unordered_map<std::string, std::string>;
 }
 
 class HTTPRequest {
-    + std::string uri;
-    + std::string method;
-    + std::string body;
-    + std::unordered_map<std::string, std::string> queryOptions;
-    + std::unordered_map<std::string, std::string> headers;
-    + std::unordered_map<std::string, std::any> middlewareData;
+    + uri: std::string;
+    + method: std::string;
+    + body: std::string;
+    + queryOptions: std::unordered_map<std::string, std::string>;
+    + headers: std::unordered_map<std::string, std::string>;
+    + middlewareData: std::unordered_map<std::string, std::any>;
 }
 
 class PipelineConfig {
-    + std::string listenerPath;
-    + std::string parserPath;
-    + std::string senderPath;
-    + std::vector<std::string> modulesPaths;
+    + listenerPath: std::string;
+    + parserPath: std::string;
+    + senderPath: std::string;
+    + modulesPaths: std::vector<std::string>;
 }
 
 interface IClient {
