@@ -4,7 +4,7 @@
 namespace api
 {
     /**
-     * @interface IModule
+     * @interface AuthorizationModuleExample
      * @brief Defines the basic behavior of a pipeline module.
      * @tparam RequestDataType Refers to the request data type. It will be transferred from the
      * parser to the modules.
