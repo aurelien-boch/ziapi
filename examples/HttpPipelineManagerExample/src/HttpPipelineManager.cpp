@@ -42,7 +42,7 @@ namespace api::pipelines
 
             std::unique_ptr<IModule<RequestDataType, ReplyDataType>> ptr = loadModule();
 
-            //compare the modules with the type and check if they are compatible, this step is optional.
+            // compare the modules with the type and check if they are compatible (this step is optional)
             if (typeCheck() != typeid(decltype(ptr)).hash_code())
                 throw std::runtime_error("Error, incompatible module provided");
             _modules.emplace_back(std::move(ptr));
