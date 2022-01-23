@@ -17,7 +17,7 @@ Here is a small overview of how a pipeline works:
       `Modules` used by the pipeline.
     - The `PipelineManager` will send it's `processRequest` method as a callback to the `onPacket` method of the
       listener
-    - When the `listen()` method of the `Listener` is called, the `Listener` starts listen for new packets.
+    - When the `listen` method of the `Listener` is called, the `Listener` starts listen for new packets.
 
 - Processing phase
     - When the `Listener` receives a full packet, it just calls corresponding callback (the `processRequest()` method from the
