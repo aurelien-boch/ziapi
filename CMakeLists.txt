@@ -24,3 +24,15 @@ target_include_directories(
         INTERFACE
         include/
 )
+
+if (UNIX)
+    set(COMPILE_FLAGS -Wall -Wextra -Weffc++)
+else()
+    set(COMPILE_FLAGS /W4)
+endif()
+
+target_compile_options(
+    ziapi
+        INTERFACE
+        ${COMPILE_FLAGS}
+)

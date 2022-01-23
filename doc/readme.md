@@ -11,6 +11,6 @@ Here is a summary containing links to all interfaces.
     * [IPipelineManager interface documentation](interfaces/IClient.md)
     * [IReplySender interface documentation](interfaces/IClient.md)
   * Types
-    * [HTTPReply](interfaces/types/HTTPReply.md)
-    * [HTTPRequest](interfaces/types/HTTPRequest.md)
+    * [HTTPReply](interfaces/types/HttpReply.md)
+    * [HTTPRequest](interfaces/types/HttpRequest.md)
     * [PipelineConfig](interfaces/types/PipelineConfig.md)
