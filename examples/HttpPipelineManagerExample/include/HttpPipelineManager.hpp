@@ -24,7 +24,7 @@ namespace api::pipelines
             void configurePipeline(const PipelineConfig &config) override;
 
         private:
-            //types are to make type change more easy (they are of course optional);
+            // types are to make type change more easy (they are of course optional)
             using RequestDataType = HTTPRequest;
             using ReplyDataType = HTTPReply;
 
