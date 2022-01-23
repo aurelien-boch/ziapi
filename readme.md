@@ -15,7 +15,7 @@ Here is a small overview of how a pipeline works:
 - Setup phase
     - The `PipelineManager` contains an instance of the `Listener`, `PacketParser`, `ReplySender` and a vector of all
       `Modules` used by the pipeline.
-    - The `PipelineManager` will send it's `processRequest()` method as a callback to the `onPacket()` method of the
+    - The `PipelineManager` will send it's `processRequest` method as a callback to the `onPacket` method of the
       listener
     - When the `listen()` method of the `Listener` is called, the `Listener` starts listen for new packets.
 
