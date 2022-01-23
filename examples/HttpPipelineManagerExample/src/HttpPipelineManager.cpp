@@ -23,7 +23,7 @@ namespace api::pipelines
         _modules.erase(_modules.begin(), _modules.end());
         for (const auto &e : config.modulesPaths)
         {
-            //replace this lambda by the extern "C" function loaded from the shared library that instantiate the module
+            // replace this lambda by the extern "C" function loaded from the shared library that instantiate the module
             std::function<std::unique_ptr<IModule<RequestDataType, ReplyDataType>> ()> loadModule(
                 []() -> std::unique_ptr<IModule<RequestDataType, ReplyDataType>> {
                     std::cout << "Module loaded !" << std::endl;
