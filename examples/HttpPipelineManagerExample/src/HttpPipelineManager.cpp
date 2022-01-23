@@ -50,7 +50,7 @@ namespace api::pipelines
         _listener.onPacket([this] (std::vector<std::byte> &&packet, IClient const &client) -> void {
             // preparation
             _onPacket(std::forward<std::vector<std::byte>>(packet), client);
-            //cleanup
+            // cleanup
         });
     }
 
