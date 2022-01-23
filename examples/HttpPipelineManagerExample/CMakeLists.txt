@@ -14,4 +14,7 @@ target_link_libraries(
     HttpPipelineManager
         PUBLIC
         ziapi
+        HttpListener
+        HttpPacketParser
+        HttpReplySender
 )

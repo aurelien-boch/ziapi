@@ -25,7 +25,6 @@ target_include_directories(
         include/
 )
 
-<<<<<<< HEAD
 if (UNIX)
     set(COMPILE_FLAGS -Wall -Wextra -Weffc++)
 else()
@@ -37,7 +36,3 @@ target_compile_options(
         INTERFACE
         ${COMPILE_FLAGS}
 )
-=======
-# TODO REMOVE
-add_subdirectory(examples)
->>>>>>> 1862b7f (feat: boilerplate HttpListener, Template file for packet parser and authorization manager.)
