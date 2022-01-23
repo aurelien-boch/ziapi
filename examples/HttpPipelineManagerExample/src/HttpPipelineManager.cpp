@@ -31,7 +31,7 @@ namespace api::pipelines
                 }
             );
 
-            //replace this lambda by the extern "C" function loaded form the shared library that returns the typeid of
+            // replace this lambda by the extern "C" function loaded form the shared library that returns the typeid of
             // the type of the module. This step is optional, it just ensures that the module is compatible with the
             // pipeline
             std::function<std::size_t ()> typeCheck(
