@@ -1,0 +1,11 @@
+#ifndef HTTPPIPELINEMANAGER_HPP
+#define HTTPPIPELINEMANAGER_HPP
+
+
+class HttpPipelineManager
+{
+
+};
+
+
+#endif //HTTPPIPELINEMANAGER_HPP

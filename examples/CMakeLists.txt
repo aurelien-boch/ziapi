@@ -11,3 +11,5 @@
 add_subdirectory(HttpListenerExample)
 add_subdirectory(AuthorizationModuleExample)
 add_subdirectory(HttpPacketParserExample)
+add_subdirectory(HttpPipelineManagerExample)
+add_subdirectory(HttpReplySenderExample)
