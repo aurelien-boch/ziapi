@@ -20,7 +20,7 @@ Here is a small overview of how a pipeline works:
     - When the `listen` method of the `Listener` is called, the `Listener` starts listen for new packets.
 
 - Processing phase
-    - When the `Listener` receives a full packet, it just calls corresponding callback (the `processRequest()` method from the
+    - When the `Listener` receives a full packet, it just calls corresponding callback (the `processRequest` method from the
       `PipelineManager`)
     - The `PipelineManager` will then call the `PacketParser`, giving it the raw request. The `PacketParser` will return
       the parsed request.
