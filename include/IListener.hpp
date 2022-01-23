@@ -12,6 +12,8 @@ namespace api
     class IListener
     {
         public:
+            virtual ~IListener() = default;
+
             /**
              * @typedef packetReceivedCallback
              * @brief Defines the callback that will be called when a complete packet is received.

@@ -15,6 +15,8 @@ namespace api
     class IModule
     {
         public:
+            virtual ~IModule() = default;
+
             /**
              * @brief Runs the pipeline module, mutating the request and/or the request and the response.
              * @param request[in,out] Refers to the request data. It can be read and mutated by modules

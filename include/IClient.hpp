@@ -23,6 +23,7 @@ namespace api
         #else
             using socket_type = int;
         #endif
+            virtual ~IClient() = default;
 
             /**
              * @brief Sends items to the client through the socket. If the socket isn't able to write all

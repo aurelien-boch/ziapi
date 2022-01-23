@@ -16,6 +16,8 @@ namespace api
     class IPacketParser
     {
         public:
+            virtual ~IPacketParser() = default;
+
             /**
              * @brief Parses the request from raw bytes to the type of the request.
              * @param rawRequest[in] Refers to the raw request received from the client as bytes.

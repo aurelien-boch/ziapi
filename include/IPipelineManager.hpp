@@ -16,6 +16,8 @@ namespace api
     class IPipelineManager
     {
         public:
+            virtual ~IPipelineManager() = default;
+
             /**
              * @brief Starts the pipeline listener when called. If the listener is already started, it should throw an
              * exception.
