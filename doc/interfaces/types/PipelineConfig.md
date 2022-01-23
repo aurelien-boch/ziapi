@@ -8,4 +8,3 @@ parameter.
 
 To get extra information, feel free to read [header](../../../include/types/PipelineConfig.hpp), it contains a lot of
 comments explaining each field.
-
