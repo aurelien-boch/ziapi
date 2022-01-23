@@ -13,4 +13,4 @@ This interface will be used in the `Listener`. You are free to chose how your li
 with the `Client`.
 
 ### ReplySender
-This interface will also be used in the reply sender which will call (normally) only the `send()` method.
+This interface will also be used in the reply sender which will call (normally) only the `send` method.
