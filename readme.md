@@ -30,7 +30,8 @@ Here is a small overview of how a pipeline works:
 
 Pipeline request workflow:
 ![Pipeline request workflow](doc/images/request_workflow.png)
-*note that the only difference http and https pipeline is the listener as the pipeline is extremely modular*
+*note that the only difference http and https pipeline is the listener (the HTTPS one will decrypt SSL)
+as the pipeline is extremely modular*
 
 ## Installation
 

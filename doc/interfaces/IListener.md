@@ -8,7 +8,7 @@ that was provided using the `onPacket` method.
 You are free to chose how the internal `Listener` will work (as long as it matches your client implementation obviously).
 
 ###  Packet Decryption
-If the packet is encrypted (using SSL / TLS for example) the listener must decrypt it to know when the packet is complete
+If the packet is encrypted (using SSL / TLS for example) the `Listener` must decrypt it to know when the packet is complete
 and then send the decrypted version to the callback.
 
 ### Client lifetime
