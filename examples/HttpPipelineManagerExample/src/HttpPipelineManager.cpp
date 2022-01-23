@@ -16,7 +16,7 @@ namespace api::pipelines
 
     void HttpPipelineManager::configurePipeline(const PipelineConfig &config)
     {
-        //load config.listenerPath lib as listener;
+        // load config.listenerPath lib as listener
         //load config.parserPath lib as listener;
         //load config.senderPath lib as listener;
 
