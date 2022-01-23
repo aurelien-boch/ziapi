@@ -1,12 +1,16 @@
 #ifndef ILISTENER_HPP
 #define ILISTENER_HPP
 
+#include <cstddef>
+#include <vector>
 #include <functional>
+
+#include "IClient.hpp"
 
 namespace api
 {
     /**
-     * @interface IListener.
+     * @interface HttpListenerExample.
      * @brief Defines the basic behavior of the pipeline listener.
      */
     class IListener
