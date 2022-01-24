@@ -24,12 +24,12 @@ namespace api::pipelines
         for (const auto &e : config.modulesPaths)
         {
             // replace this lambda by the extern "C" function loaded from the shared library that instantiate the module
-            std::function<std::unique_ptr<IModule<RequestDataType, ReplyDataType>> ()> loadModule(
+            std::function<std::unique_ptr<IModule<RequestDataType, ReplyDataType>> ()> loadModule{
                 []() -> std::unique_ptr<IModule<RequestDataType, ReplyDataType>> {
                     std::cout << "Module loaded !" << std::endl;
                     return nullptr;
                 }
-            );
+            };
 
             // replace this lambda by the extern "C" function loaded form the shared library that returns the typeid of
             // the type of the module. This step is optional, it just ensures that the module is compatible with the
