@@ -1,6 +1,6 @@
 # Examples
 
-Here is a summary containing link to all examples (
+Here is a summary containing links to all examples
 
 ## Read carefully:
 Please note that no module is really implemented since that would be considered as cheating. There are only some prints as
