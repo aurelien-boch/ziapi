@@ -36,14 +36,6 @@ namespace api
              * @warning If the PipelineManager is unable to load the library, it should throw an exception.
              */
             void configurePipeline(PipelineConfig const &config);
-
-        protected:
-            /**
-             * @brief Handles a client request by calling the parser, the modules and the sender.
-             * @param packet[in] Refers to the packet that was sent by the client.
-             * @param client[in] Refers to the client that sent the packet.
-             */
-            virtual void processRequest(std::vector<std::byte> &&packet, IClient const &client) noexcept = 0;
     };
 }
 
