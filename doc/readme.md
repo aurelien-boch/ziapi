@@ -5,11 +5,11 @@ Here is a summary containing links to all interfaces.
   * [UML](architecture.puml)
   * Interfaces
     * [IClient interface documentation](interfaces/IClient.md)
-    * [IListener interface documentation](interfaces/IClient.md)
-    * [IModule interface documentation](interfaces/IClient.md)
-    * [IPacketParser interface documentation](interfaces/IClient.md)
-    * [IPipelineManager interface documentation](interfaces/IClient.md)
-    * [IReplySender interface documentation](interfaces/IClient.md)
+    * [IListener interface documentation](interfaces/IListener.md)
+    * [IModule interface documentation](interfaces/IModule.md)
+    * [IPacketParser interface documentation](interfaces/IPacketParser.md)
+    * [IPipelineManager interface documentation](interfaces/IPipelineManager.md)
+    * [IReplySender interface documentation](interfaces/IReplySender.md)
   * Types
     * [HTTPReply](interfaces/types/HttpReply.md)
     * [HTTPRequest](interfaces/types/HttpRequest.md)
